@@ -1,7 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/homepage/homepage"
+    "pages/homepage/homepage",
+    "pages/seminar/seminar",
+    "pages/generalCourse/generalCourse",
+    "pages/publicCourse/publicCourse",
+    "pages/classicsReading/classicsReading",
+    "pages/PECourse/PECourse",
+    "pages/RequiredCourse/RequiredCourse"
   ],
   "window":{
     "backgroundTextStyle":"light",
