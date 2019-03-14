@@ -1,5 +1,5 @@
 <view class="cu-custom" style="height:{{CustomBar}}px;">
-  <view class="cu-bar fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+  <view class="cu-bar fixed bg-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
     <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
       <text class='icon-back'></text> 我的主页
     </navigator>
@@ -20,7 +20,7 @@
 <block wx:for="{{classes0}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text>{{lip.name}}
+    <text class='icon-title text-orange '></text>{{lip.name}} ({{lip.teacher}})
   </view>
 
   <view class='action'>
@@ -34,7 +34,7 @@
 <block wx:for="{{classes1}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text>{{lip.name}}
+    <text class='icon-title text-orange '></text>{{lip.name}} ({{lip.teacher}})
   </view>
 
   <view class='action'>
@@ -48,7 +48,7 @@
 <block wx:for="{{classes2}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text>{{lip.name}}
+    <text class='icon-title text-orange '></text>{{lip.name}} ({{lip.teacher}})
   </view>
 
   <view class='action'>
@@ -62,7 +62,7 @@
 <block wx:for="{{classes3}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text>{{lip.name}}
+    <text class='icon-title text-orange '></text>{{lip.name}} ({{lip.teacher}})
   </view>
 
   <view class='action'>

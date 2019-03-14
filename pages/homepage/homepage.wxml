@@ -38,16 +38,16 @@
     </navigator>
   </view>
   <view class="cu-item arrow">
-    <navigator class='content' url='../log/log' hover-class='none'>
+    <navigator class='content' url='feedback/feedback' hover-class='none'>
       <image src='../images/feedback.png' class='png' mode='aspectFit'></image>
       <text class='text-grey'>意见反馈</text>
     </navigator>
   </view>
   <view class="cu-item arrow">
-    <view class='content' bindtap="showQrcode">
+    <navigator class='content' url='about/about' hover-class='none'>
       <image src='../images/about.png' class='png' mode='aspectFit'></image>
       <text class='text-grey'>关于</text>
-    </view>
+    </navigator>
   </view>
   <view class="cu-item arrow">
     <button class='cu-btn content' open-type='feedback'>

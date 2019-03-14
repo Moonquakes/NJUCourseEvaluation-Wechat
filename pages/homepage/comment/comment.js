@@ -15,12 +15,14 @@ Page({
       {
         id:0,
         name : '微积分Ⅰ',
+        teacher: '窦斗',
         status : '去评价',
         disabled : false
       },
       {
         id:1,
         name : '计基',
+        teacher: '王浩然',
         status : '去评价',
         disabled : false
       }
@@ -29,12 +31,14 @@ Page({
       {
       id: 0,
       name: '微积分Ⅱ',
+      teacher: '窦斗',
       status: '去评价',
       disabled: false
       },
       {
         id: 1,
         name: '软工Ⅰ',
+        teacher: '刘钦',
         status: '去评价',
         disabled: false
       }
@@ -43,18 +47,21 @@ Page({
       {
         id: 0,
         name: '计组',
+        teacher: '任桐炜',
         status: '去评价',
         disabled: false
       },
       {
         id: 1,
         name: '数据结构',
+        teacher: '伏晓',
         status: '去评价',
         disabled: false
       },
       {
         id: 2,
         name: '毛概',
+        teacher: '武海宝',
         status: '去评价',
         disabled: false
       }
@@ -63,12 +70,14 @@ Page({
     {
       id: 0,
       name: '计网',
+      teacher: '刘峰',
       status: '去评价',
       disabled: false
     },
     {
       id: 1,
       name: '软统',
+      teacher: '陈振宇',
       status: '去评价',
       disabled: false
     }

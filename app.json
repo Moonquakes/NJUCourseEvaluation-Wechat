@@ -2,7 +2,9 @@
   "pages":[
     "pages/index/index",
     "pages/homepage/homepage",
-    "pages/homepage/comment/comment"
+    "pages/homepage/comment/comment",
+    "pages/homepage/about/about",
+    "pages/homepage/feedback/feedback"
   ],
   "window":{
     "backgroundTextStyle":"light",
