@@ -14,66 +14,59 @@
     </picker>
   </view>
 
-<view class="cu-bar bg-white margin-top">
-  <view class='action'>
-    <text class='icon-title text-orange '></text> 微积分Ⅰ
-  </view>
-
-  <view class='action'>
-    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-target="DialogModal1" >去评价</button>
-  </view>
-</view>
-
 
 
 <view id="class0" hidden="{{class0}}">
-<block wx:for="{{classes0}}">
+<block wx:for="{{classes0}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text> {{item}}
+    <text class='icon-title text-orange '></text>{{lip.name}}
   </view>
 
   <view class='action'>
-    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-target="DialogModal1" >去评价</button>
+    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-id="{{lip.id}}" data-target="DialogModal1" disabled="{{lip.disabled}}">{{lip.status}}</button>
   </view>
 </view>
 </block>
 </view>
 
 <view id="class1" hidden="{{class1}}">
-<block wx:for="{{classes1}}">
+<block wx:for="{{classes1}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text> {{item}}
+    <text class='icon-title text-orange '></text>{{lip.name}}
   </view>
+
   <view class='action'>
-    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-target="DialogModal1" >去评价</button>
+    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-id="{{lip.id}}" data-target="DialogModal1" disabled="{{lip.disabled}}">{{lip.status}}</button>
   </view>
 </view>
 </block>
 </view>
 
 <view id="class2" hidden="{{class2}}">
-<block wx:for="{{classes2}}">
+<block wx:for="{{classes2}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text> {{item}}
+    <text class='icon-title text-orange '></text>{{lip.name}}
   </view>
+
   <view class='action'>
-    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-target="DialogModal1" >去评价</button>
+    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-id="{{lip.id}}" data-target="DialogModal1" disabled="{{lip.disabled}}">{{lip.status}}</button>
   </view>
 </view>
 </block>
 </view>
 
 <view id="class3" hidden="{{class3}}">
-<block wx:for="{{classes3}}">
+<block wx:for="{{classes3}}" wx:for-item="lip" wx:for-index="{{index}}">
 <view class="cu-bar bg-white margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text> {{item}}
+    <text class='icon-title text-orange '></text>{{lip.name}}
   </view>
+
   <view class='action'>
-    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-target="DialogModal1" >去评价</button>
+    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showDialogBtn" data-id="{{lip.id}}" data-target="DialogModal1" disabled="{{lip.disabled}}">{{lip.status}}</button>
   </view>
 </view>
 </block>
@@ -110,24 +103,6 @@
 
 
 
-
-
-
-
     
   </view>
 </view>
-
-
-<view class="cu-bar bg-white margin-top">
-  <view class='action'>
-    <text class='icon-title text-orange '></text> 微积分Ⅰ
-  </view>
-  <view class='action'>
-    <button  class='cu-btn block line-blue margin-tb-sm lg' bindtap="showModal" data-target="DialogModal1" disabled>已评价</button>
-  </view>
-</view>
-
-
-
- 

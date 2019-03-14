@@ -1,6 +1,9 @@
 const app = getApp();
+
 Page({
   data: {
+    currentClasses:'',
+    currentIndex:'',
     class0: true,
     class1: true,
     class2: true,
@@ -8,10 +11,68 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     picker: ['大一上学期', '大一下学期', '大二上学期','大二下学期'],
-    classes0:['离散数学','计基'],
-    classes1: ['微积分Ⅱ', '软工Ⅰ'],
-    classes2: ['计组', '数据结构'],
-    classes3: ['计网', '软统'],
+    classes0:[
+      {
+        id:0,
+        name : '微积分Ⅰ',
+        status : '去评价',
+        disabled : false
+      },
+      {
+        id:1,
+        name : '计基',
+        status : '去评价',
+        disabled : false
+      }
+    ],
+    classes1: [
+      {
+      id: 0,
+      name: '微积分Ⅱ',
+      status: '去评价',
+      disabled: false
+      },
+      {
+        id: 1,
+        name: '软工Ⅰ',
+        status: '去评价',
+        disabled: false
+      }
+    ],
+    classes2: [
+      {
+        id: 0,
+        name: '计组',
+        status: '去评价',
+        disabled: false
+      },
+      {
+        id: 1,
+        name: '数据结构',
+        status: '去评价',
+        disabled: false
+      },
+      {
+        id: 2,
+        name: '毛概',
+        status: '去评价',
+        disabled: false
+      }
+    ],
+    classes3: [
+    {
+      id: 0,
+      name: '计网',
+      status: '去评价',
+      disabled: false
+    },
+    {
+      id: 1,
+      name: '软统',
+      status: '去评价',
+      disabled: false
+    }
+    ],
     TabCur: 0,
     scrollLeft: 0,
     star: 0,
@@ -38,6 +99,7 @@ Page({
     var index=e.detail.value;
     if(index==0){
       this.setData({
+        currentClasses: 'classes0',
         class0: false,
         class1: true,
         class2: true,
@@ -45,6 +107,7 @@ Page({
       })
     }else if(index==1){
       this.setData({
+        currentClasses: 'classes1',
         class0: true,
         class1: false,
         class2: true,
@@ -52,6 +115,7 @@ Page({
       })
     }else if(index==2){
       this.setData({
+        currentClasses: 'classes2',
         class0: true,
         class1: true,
         class2: false,
@@ -59,6 +123,7 @@ Page({
       })
     } else if (index == 3) {
       this.setData({
+        currentClasses: 'classes3',
         class0: true,
         class1: true,
         class2: true,
@@ -85,8 +150,12 @@ Page({
   /**
    * 弹窗
    */
-  showDialogBtn: function () {
-
+  showDialogBtn: function (e) {
+    var id = e.currentTarget.dataset.id;
+    console.log(id);
+    this.setData({
+      currentIndex:id
+    })
     this.setData({
       showModal: true
     })
@@ -99,7 +168,7 @@ Page({
   /**
    * 隐藏模态对话框
    */
-  hideModal: function () {
+  hideModal: function (e) {
     this.setData({
       showModal: false
     });
@@ -114,20 +183,17 @@ Page({
    * 对话框确认按钮点击事件
    */
   onConfirm: function (e) {
-    var pages = getCurrentPages();
-    var currPage = pages[pages.length - 1];   //当前页面
-    var prevPage = pages[pages.length - 2];  //上一个页面
-
-    //直接调用上一个页面的setData()方法，把数据存到上一个页面中去
-    prevPage.setData({
-      disabled: true
-    })
     wx.showToast({
       title: '提交成功',
       icon: 'success',
       duration: 2000
     })
     this.hideModal();
-   
+    var currentClasses = this.data.currentClasses;
+    var currentIndex = this.data.currentIndex;
+    this.setData({
+      [currentClasses + '[' + currentIndex + '].disabled']: true,
+      [currentClasses + '[' + currentIndex + '].status']: '已评价',
+    })
   },
 })
