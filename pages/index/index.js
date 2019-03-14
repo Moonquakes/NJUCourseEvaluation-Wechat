@@ -5,6 +5,25 @@ const app = getApp()
 
 Component({
   data: {
+    picList: [
+      {
+        id:0,
+        url:'https://img-blog.csdnimg.cn/20190314065004194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FsZXhjaGFuY2hpYw==,size_16,color_FFFFFF,t_70'
+      },
+      {
+        id: 1,
+        url: 'https://img-blog.csdnimg.cn/20190314065029414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FsZXhjaGFuY2hpYw==,size_16,color_FFFFFF,t_70'
+      },
+      {
+        id: 2,
+        url: 'https://img-blog.csdnimg.cn/20190314065041306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FsZXhjaGFuY2hpYw==,size_16,color_FFFFFF,t_70'
+      },
+      {
+        id: 3,
+        url: 'https://img-blog.csdnimg.cn/20190314065135736.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FsZXhjaGFuY2hpYw==,size_16,color_FFFFFF,t_70'
+      },
+
+    ],
     elements: [{
       title: '研讨课',
       name: 'seminar',
