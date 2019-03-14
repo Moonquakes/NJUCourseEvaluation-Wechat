@@ -1,7 +1,8 @@
 /* pages/component/nav/nav.wxss */
 .VerticalNav.nav {
-  width: 200rpx;
+  width: 225rpx;
   white-space: initial;
+  margin-top: 10rpx;
 }
 
 .VerticalNav.nav .cu-item {
