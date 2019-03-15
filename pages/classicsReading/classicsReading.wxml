@@ -24,7 +24,7 @@
           <text class='icon-title text-cyan'></text>{{item.type}}</view>
       </view>
       <view class="cu-list menu menu-avatar">
-        <view class="cu-item " wx:for="{{item.course}}" wx:for-item="course" wx:key="id" >
+        <view class="cu-item " wx:for="{{item.course}}" wx:for-item="course" wx:key="{{id}}" bindtap='toCourseDetail' data-index='{{course}}'>
           <view class="cu-avatar radius lg" style="background-image:url({{course.pic}});"></view>
           <view class='content'>
             <view>{{course.name}}</view>

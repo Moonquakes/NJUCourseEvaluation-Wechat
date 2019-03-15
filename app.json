@@ -7,7 +7,9 @@
     "pages/publicCourse/publicCourse",
     "pages/classicsReading/classicsReading",
     "pages/PECourse/PECourse",
-    "pages/RequiredCourse/RequiredCourse"
+    "pages/RequiredCourse/RequiredCourse",
+    "pages/courseDetail/courseDetail",
+    "pages/courseContent/courseContent"
   ],
   "window":{
     "backgroundTextStyle":"light",

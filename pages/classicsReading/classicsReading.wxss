@@ -1,12 +1,12 @@
 /* pages/component/nav/nav.wxss */
 .VerticalNav.nav {
-  width: 225rpx;
+  width: 240rpx;
   white-space: initial;
   margin-top: 10rpx;
 }
 
 .VerticalNav.nav .cu-item {
-  width: 228rpx;
+  width: 240rpx;
   text-align: center;
   background-color: #fff;
   margin: 0;

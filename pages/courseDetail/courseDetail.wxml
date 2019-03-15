@@ -1,0 +1,75 @@
+<!--pages/courseDetail/courseDetail.wxml-->
+<!--
+<view class="cu-custom">
+  <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action border-custom' style="width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px);" open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text>
+     
+      <text class='icon-homefill' bindtap='toIndex'></text>
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'>{{course.name}}</view>
+  </view>
+</view>
+-->
+
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text>{{courseDetail.sort}}
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'>{{course.name}}</view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='icon-favor text-blue'></text>课程简介
+  </view>
+</view>
+
+<view class="padding text-center">
+  <view class=" radius shadow-warp bg-white">
+    <view class="flex p-xs margin-bottom-sm mb-sm">
+
+      <view class='padding-sm flex-sub bg-white  margin-xs'>
+        <view class="flex-wrap flex justify-start align-center bg-white ">
+          <text class='icon-title text-blue' style='margin:8rpx'></text>课程: {{course.name}}
+          <text class='icon-title text-blue' style='margin:8rpx'></text>教师: {{course.tutor}}
+          <button class='btn-detail  sm bg-gradual-blue' bindtap="toCourseContent" data-index='{{courseDetail}}'>查看课程详情</button>
+        </view>
+      </view>
+
+      <view class='padding-sm flex-sub bg-white margin-xs'>
+        <image mode="widthFix" src="{{course.pic}}" style="width:100%"></image>
+      </view>
+
+    </view>
+  </view>
+
+</view>
+
+<view class="cu-bar bg-white solid-bottom ">
+  <view class='action'>
+    <text class='icon-comment text-blue'></text>课程评价
+  </view>
+</view>
+<view class="cu-card dynamic">
+  <view wx:for="1" wx:key class="cu-item shadow">
+    <view class="cu-list menu menu-avatar comment solids-top">
+      <view class="cu-item" wx:for="{{courseComment}}" wx:for-item="comment" wx:key>
+        <view class="cu-avatar round sm bg-cyan light">{{comment.firstName}}</view>
+        <view class='content'>
+          <view class='text-grey'>{{comment.name}}</view>
+          <view class='text-black text-content text-df'>
+            {{comment.content}}
+          </view>
+      
+          <view class='margin-top-sm flex justify-between'>
+            <view class='text-gray text-xs'>{{comment.time}}</view>
+           
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

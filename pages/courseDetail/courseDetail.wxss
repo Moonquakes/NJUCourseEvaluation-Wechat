@@ -1,0 +1,25 @@
+/* pages/courseDetail/courseDetail.wxss */
+.btn-detail {
+  float: left;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  font-size: 25rpx;
+  height: 49rpx;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  transform: translate(0rpx, 0rpx);
+
+}
+.cu-avatar.sm {
+  width: 64rpx;
+  height: 64rpx;
+  font-size: 1em;
+}
