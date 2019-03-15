@@ -1,4 +1,21 @@
-Page({})
+const app = getApp();
+Page({
+  data: {
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
+    modalName : null
+  },
+  onExit: function (e) {
+    this.setData({
+      modalName: 'show'
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+})
 Component({
   data: {
     starCount: 0,
@@ -71,6 +88,7 @@ Component({
         current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
       })
     },
+    
   },
   pageLifetimes: {
     show() {
