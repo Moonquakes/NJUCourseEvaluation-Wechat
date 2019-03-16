@@ -15,6 +15,7 @@ Page({
 Component({
   data: {
     starCount: 0,
+    
     forksCount: 0,
     visitTotal: 0,
   },

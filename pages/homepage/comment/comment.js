@@ -1,4 +1,5 @@
 const app = getApp();
+var network = require('../../../config/network.js')
 
 Page({
   data: {
@@ -93,6 +94,7 @@ Page({
       '非常好',
     ],
   },
+  
   tabSelect(e) {
     console.log(e);
     this.setData({
@@ -102,10 +104,35 @@ Page({
   },
   PickerChange(e) {
     console.log(e);
+    var that = this;
+    
     this.setData({
       index: e.detail.value
     })
     var index=e.detail.value;
+    network.GetCoursesByCatagory(index, function (res) {
+  
+      var courselist = res.data.courseList;
+      that.setData({
+        classes0: [
+          {
+            id: 0,
+            name: courselist[0].courseName,
+            teacher: courselist[0].description,
+            status: '去评价',
+            disabled: false
+          },
+          {
+            id: 1,
+            name: courselist[1].courseName,
+            teacher: courselist[1].description,
+            status: '去评价',
+            disabled: false
+          }
+        ],
+      })
+    });
+    
     if(index==0){
       this.setData({
         currentClasses: 'classes0',
