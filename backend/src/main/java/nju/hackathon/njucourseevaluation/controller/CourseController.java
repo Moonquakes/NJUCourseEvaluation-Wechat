@@ -1,5 +1,6 @@
 package nju.hackathon.njucourseevaluation.controller;
 
+import nju.hackathon.njucourseevaluation.bl.parameter.course.GetCoursesByCatagoryParameter;
 import nju.hackathon.njucourseevaluation.bl.parameter.course.InsertCourseByNameParameter;
 import nju.hackathon.njucourseevaluation.bl.parameter.course.UpdateCourseByNameParameter;
 import nju.hackathon.njucourseevaluation.bl.response.course.GetCourseByIdResponse;
@@ -25,8 +26,8 @@ public class CourseController {
     }
 
     @RequestMapping(value = "GetCoursesByCatagory", method = RequestMethod.POST)
-    public GetCoursesByCatagoryResponse getCoursesByCatagoryResponse(@RequestParam(name = "catagory", defaultValue = "1") int catagory){
-        return courseblService.GetCoursesByCatagoryResponse(catagory);
+    public GetCoursesByCatagoryResponse getCoursesByCatagoryResponse(@RequestBody GetCoursesByCatagoryParameter parm){
+        return courseblService.GetCoursesByCatagoryResponse(parm);
     }
 
     @RequestMapping(value = "InsertCourseByName", method = RequestMethod.POST)

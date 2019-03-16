@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SearchCourseByNameParameter { //搜索框操作 后期可以加上根据老师搜索
-    String courseKeyword;
+public class GetCoursesByCatagoryParameter {
+    private  int catagory;
 }

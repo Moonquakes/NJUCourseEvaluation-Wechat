@@ -1,5 +1,6 @@
 package nju.hackathon.njucourseevaluation.bl.serviceimpl;
 
+import nju.hackathon.njucourseevaluation.bl.parameter.course.GetCoursesByCatagoryParameter;
 import nju.hackathon.njucourseevaluation.bl.parameter.course.InsertCourseByNameParameter;
 import nju.hackathon.njucourseevaluation.bl.parameter.course.UpdateCourseByNameParameter;
 import nju.hackathon.njucourseevaluation.bl.response.course.GetCourseByIdResponse;
@@ -32,8 +33,8 @@ public class CourseblServiceImpl implements CourseblService {
     }
 
     @Override
-    public GetCoursesByCatagoryResponse GetCoursesByCatagoryResponse(int catagory) {
-        List<Course> courseList = courseDataAcessService.GetCoursesByCatagory(catagory);
+    public GetCoursesByCatagoryResponse GetCoursesByCatagoryResponse(GetCoursesByCatagoryParameter parm) {
+        List<Course> courseList = courseDataAcessService.GetCoursesByCatagory(parm.getCatagory());
         return new GetCoursesByCatagoryResponse(courseList);
     }
 

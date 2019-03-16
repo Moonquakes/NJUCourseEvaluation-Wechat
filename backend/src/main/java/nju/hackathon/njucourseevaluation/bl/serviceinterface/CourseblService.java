@@ -1,5 +1,6 @@
 package nju.hackathon.njucourseevaluation.bl.serviceinterface;
 
+import nju.hackathon.njucourseevaluation.bl.parameter.course.GetCoursesByCatagoryParameter;
 import nju.hackathon.njucourseevaluation.bl.parameter.course.InsertCourseByNameParameter;
 import nju.hackathon.njucourseevaluation.bl.parameter.course.UpdateCourseByNameParameter;
 import nju.hackathon.njucourseevaluation.bl.response.course.GetCourseByIdResponse;
@@ -9,7 +10,7 @@ import nju.hackathon.njucourseevaluation.bl.response.course.UpdateCourseByNameRe
 
 public interface CourseblService {
     GetCourseByIdResponse GetCourseByIdResponse(Integer id);
-    GetCoursesByCatagoryResponse GetCoursesByCatagoryResponse(int catagory);
+    GetCoursesByCatagoryResponse GetCoursesByCatagoryResponse(GetCoursesByCatagoryParameter parm);
     InsertCourseByNameResponse InsertCourseByNameResponse(InsertCourseByNameParameter parm);
     UpdateCourseByNameResponse UpdateCourseByNameResponse(UpdateCourseByNameParameter parm);
 }
