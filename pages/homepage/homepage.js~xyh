@@ -3,7 +3,7 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    modalName: null
+    modalName : null
   },
   onExit: function (e) {
     this.setData({
@@ -33,7 +33,7 @@ Component({
       numDH();
       function numDH() {
         if (i < 20) {
-          setTimeout(function () {
+          setTimeout(function() {
             that.setData({
               visitTotal: i,
               forksCount: i,
@@ -88,7 +88,7 @@ Component({
         current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
       })
     },
-
+    
   },
   pageLifetimes: {
     show() {

@@ -9,7 +9,10 @@
     "pages/PECourse/PECourse",
     "pages/RequiredCourse/RequiredCourse",
     "pages/courseDetail/courseDetail",
-    "pages/courseContent/courseContent"
+    "pages/courseContent/courseContent",
+    "pages/homepage/comment/comment",
+    "pages/homepage/about/about",
+    "pages/homepage/feedback/feedback"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -24,14 +27,16 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/select_home.png"
+        "iconPath": "pages/images/home.png",
+        "selectedIconPath": "pages/images/select_home.png"
+
       },
       {
         "pagePath": "pages/homepage/homepage",
         "text": "个人中心",
-        "iconPath": "images/user.png",
-        "selectedIconPath": "images/select_user.png"
+        "iconPath": "pages/images/user.png",
+        "selectedIconPath": "pages/images/select_user.png"
+
       }
     ]
   }
