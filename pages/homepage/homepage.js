@@ -5,11 +5,7 @@ Page({
     CustomBar: app.globalData.CustomBar,
     modalName: null
   },
-  onExit: function (e) {
-    this.setData({
-      modalName: 'show'
-    })
-  },
+
   hideModal(e) {
     this.setData({
       modalName: null
@@ -60,6 +56,11 @@ Component({
         e = (e / 10000).toFixed(1) + 'W'
       }
       return e
+    },
+    onExit: function (e) {
+      this.setData({
+        modalName: 'show'
+      })
     },
     CopyLink(e) {
       wx.setClipboardData({
