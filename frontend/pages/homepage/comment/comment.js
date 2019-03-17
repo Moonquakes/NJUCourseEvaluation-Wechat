@@ -13,75 +13,16 @@ Page({
     CustomBar: app.globalData.CustomBar,
     picker: ['大一上学期', '大一下学期', '大二上学期','大二下学期'],
     classes0:[
-      {
-        id:0,
-        name : '微积分Ⅰ',
-        teacher: '窦斗',
-        status : '去评价',
-        disabled : false
-      },
-      {
-        id:1,
-        name : '计基',
-        teacher: '王浩然',
-        status : '去评价',
-        disabled : false
-      }
+      
     ],
     classes1: [
-      {
-      id: 0,
-      name: '微积分Ⅱ',
-      teacher: '窦斗',
-      status: '去评价',
-      disabled: false
-      },
-      {
-        id: 1,
-        name: '软工Ⅰ',
-        teacher: '刘钦',
-        status: '去评价',
-        disabled: false
-      }
+      
     ],
     classes2: [
-      {
-        id: 0,
-        name: '计组',
-        teacher: '任桐炜',
-        status: '去评价',
-        disabled: false
-      },
-      {
-        id: 1,
-        name: '数据结构',
-        teacher: '伏晓',
-        status: '去评价',
-        disabled: false
-      },
-      {
-        id: 2,
-        name: '毛概',
-        teacher: '武海宝',
-        status: '去评价',
-        disabled: false
-      }
+      
     ],
     classes3: [
-    {
-      id: 0,
-      name: '计网',
-      teacher: '刘峰',
-      status: '去评价',
-      disabled: false
-    },
-    {
-      id: 1,
-      name: '软统',
-      teacher: '陈振宇',
-      status: '去评价',
-      disabled: false
-    }
+    
     ],
     TabCur: 0,
     scrollLeft: 0,
@@ -94,25 +35,11 @@ Page({
       '非常好',
     ],
   },
-  
-  tabSelect(e) {
-    console.log(e);
-    this.setData({
-      TabCur: e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id - 1) * 60
-    })
-  },
-  PickerChange(e) {
-    console.log(e);
+  onLoad:function(e){
     var that = this;
-    
-    this.setData({
-      index: e.detail.value
-    })
-    var index=e.detail.value;
-    network.GetCoursesByCatagory(index, function (res) {
-  
+    network.GetCoursesByCatagory(0, function (res) {
       var courselist = res.data.courseList;
+      console.log(res.data.courseList);
       that.setData({
         classes0: [
           {
@@ -128,10 +55,102 @@ Page({
             teacher: courselist[1].description,
             status: '去评价',
             disabled: false
-          }
+          },
+          {
+            id: 2,
+            name: courselist[2].courseName,
+            teacher: courselist[2].description,
+            status: '去评价',
+            disabled: false
+          },
         ],
       })
     });
+    network.GetCoursesByCatagory(1, function (res) {
+      var courselist = res.data.courseList;
+      console.log(res.data.courseList);
+      that.setData({
+        classes1: [
+          {
+            id: 0,
+            name: courselist[0].courseName,
+            teacher: courselist[0].description,
+            status: '去评价',
+            disabled: false
+          },
+          {
+            id: 1,
+            name: courselist[1].courseName,
+            teacher: courselist[1].description,
+            status: '去评价',
+            disabled: false
+          },
+        ],
+      })
+    });
+    network.GetCoursesByCatagory(2, function (res) {
+      var courselist = res.data.courseList;
+      console.log(res.data.courseList);
+      that.setData({
+        classes2: [
+          {
+            id: 0,
+            name: courselist[0].courseName,
+            teacher: courselist[0].description,
+            status: '去评价',
+            disabled: false
+          },
+          {
+            id: 1,
+            name: courselist[1].courseName,
+            teacher: courselist[1].description,
+            status: '去评价',
+            disabled: false
+          },
+        ],
+      })
+    });
+    network.GetCoursesByCatagory(3, function (res) {
+      var courselist = res.data.courseList;
+      console.log(res.data.courseList);
+      that.setData({
+        classes3: [
+          {
+            id: 0,
+            name: courselist[0].courseName,
+            teacher: courselist[0].description,
+            status: '去评价',
+            disabled: false
+          },
+          {
+            id: 1,
+            name: courselist[1].courseName,
+            teacher: courselist[1].description,
+            status: '去评价',
+            disabled: false
+          },
+
+        ],
+      })
+    });
+
+  },
+  tabSelect(e) {
+    console.log(e);
+    this.setData({
+      TabCur: e.currentTarget.dataset.id,
+      scrollLeft: (e.currentTarget.dataset.id - 1) * 60
+    })
+  },
+  PickerChange(e) {
+    console.log(e);
+    var that = this;
+    
+    that.setData({
+      index: e.detail.value
+    })
+    var index=e.detail.value;
+    
     
     if(index==0){
       this.setData({
