@@ -1,0 +1,30 @@
+<view class='cu-custom' style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <view class='content' style='top:{{StatusBar}}px;'>NJU课程评价系统</view>
+  </view>
+</view>
+
+
+<view class="cu-bar search fixed" style="top:{{CustomBar}}px">
+  <view class='search-form round'>
+    <text class="icon-search"></text>
+    <input type="text" placeholder="请输入课程名" confirm-type="search" bindinput='searchCourse'></input>
+  </view>
+</view>
+
+
+<view class="index-card" style='margin-top:90rpx'>
+  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{picList}}" wx:key class="{{cardCur==index?'cur':''}}">
+      <view class='bg-img shadow-blur' style="background-image:url({{item.url}})"></view>
+    </swiper-item>
+  </swiper>
+</view>
+<view class='nav-list'>
+  <navigator open-type="navigate" hover-class='none' url="../{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+    <view class="nav-title">{{item.title}}</view>
+    <view class="nav-name">{{item.name}}</view>
+    <text class='icon-{{item.icon}}'></text>
+  </navigator>
+</view>
+<view class='cu-tabbar-height'></view>
